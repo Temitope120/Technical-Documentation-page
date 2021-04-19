@@ -1,0 +1,17 @@
+* {
+  margin-top: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header-container {
+  height: 1.2rem;
+  width: 100vw;
+}
+nav {
+  background-color: yellow;
+  height: 1.2 rem;
+  border: 1px solid black;
+}
+.header-wrap a {
+  display: inline;
+}
