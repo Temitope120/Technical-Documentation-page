@@ -15,3 +15,12 @@ nav {
 .header-wrap a {
   display: inline;
 }
+.view-courses {
+  overflow-x: visible;
+  overflow-y: visible;
+  max-height: 20%;
+}
+.view-courses a {
+  text-decoration: none;
+  color: black !important;
+}

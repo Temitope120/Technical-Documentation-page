@@ -21,7 +21,7 @@
     
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#viewCourses" >
     <!-- <div class="header-container">
     <nav id="navbar" class="navbar-dark collapsible">
         <header class="main-header " id="main-header">
@@ -52,11 +52,39 @@
     <!-- overflowX:hidden; will be used for the first col which includes the links todiffernt js pages-->
 
     <div class="container" id=main-doc>
-
         <div class="row">
-            <div class="col-4">
-                <div id=" introduction">
+            <button type="button" class="navbar-toggler" data-target="#viewCourses">
+            </button>
+            <!-- The links -->
+            <div class="col-6 view-courses">
+                <h1> View courses</h1>
 
+            <ul>
+               <p> 
+                   <a href="#introduction"> Introduction</a> 
+                </p>
+                <p> 
+                    <a href="#What_you_should_already_know"> What You Should Already know</a> 
+                </p>
+                <p> 
+                    <a href="#JavaScript_and_Java"> Javascript and java</a> 
+                </p>
+                <p> 
+                    <a href="#helloWorld"> Hello World</a>
+                </p>
+                <p> 
+                    <a href="#variables"> Variables</a>
+                 </p>
+                <p> 
+                    <a href="#declaring-variables"> Declaring Variables</a>
+                </p>
+                <p>
+                    <a href="#declaring-variables2"> Declaring Variables</a>
+                </p>
+            </ul>    
+            </div>
+            <div class="col-6" id="viewCourses">
+                <div id=" introduction">
                     <section id="introduction" class="main-section">
                         <!--       1st header   -->
                         <header>
@@ -156,16 +184,16 @@
 
                     <!--    4th section      -->
 
-                    <section class="main-section" id="heading-3">
+                    <section class="main-section" id="helloWorld">
                         <header>
                             <h1> Hello World </h1>
                         </header>
                         <article>
                             To get started with writing JavaScript, open the Scratchpad and write your first "Hello
-                            world" JavaScript code:
+                            world" JavaScript code: <br> <br>
                             <code>function greetMe(yourName) { alert("Hello " + yourName); }
                             greetMe("World");
-                            </code>
+                            </code><br> <br>
                             Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
                         </article>
                     </section>
@@ -197,7 +225,7 @@
                         </article>
                     </section>
                     <!--  6th section -->
-                    <section class="main-section" id="declaring-variable">
+                    <section class="main-section" id="declaring-variables">
                         <header>
                             <h1> Declaring Variables </h1>
                         </header>
@@ -205,13 +233,13 @@
                             You can declare a variable in three ways:
                             <p>
                                 With the keyword var. For example,
-                                <code> var x = 42. </code>
+                               <p> <code> var x = 42. </code> </p> 
                                 This syntax can be used to declare both local and global variables.
                             </p>
 
                             <p>
                                 By simply assigning it a value. For example,
-                                <code> x = 42. </code>
+                               <p> <code> x = 42. </code> </p> 
                                 This always declares a global variable. It generates a strict JavaScript warning.
                                 You
                                 shouldn't use this variant.
@@ -219,14 +247,14 @@
 
                             <p>
                                 With the keyword let. For example,
-                                <code> let y = 13. </code>
+                              <p> <code> let y = 13. </code> </p>
                                 This syntax can be used to declare a block scope local variable. See Variable scope
                                 below.
                             </p>
                         </article>
                     </section>
-                        <!--7th section -->
-                    <section class="main-section" id="declaring-variable">
+                    <!--7th section -->
+                    <section class="main-section" id="declaring-variables2">
                         <header>
                             <h1> Declaring Variables </h1>
                         </header>
@@ -234,13 +262,14 @@
                             You can declare a variable in three ways:
                             <p>
                                 With the keyword var. For example,
-                                <code> var x = 42. </code>
+                                 <p> <code> var x = 42. </code></p>
                                 This syntax can be used to declare both local and global variables.
                             </p>
 
                             <p>
                                 By simply assigning it a value. For example,
-                                <code> x = 42. </code>
+                                <p> <code> x = 42. </code>
+                                </p>
                                 This always declares a global variable. It generates a strict JavaScript warning.
                                 You
                                 shouldn't use this variant.
@@ -248,7 +277,8 @@
 
                             <p>
                                 With the keyword let. For example,
-                                <code> let y = 13. </code>
+                                <p> <code> let y = 13. </code>
+                                </p>
                                 This syntax can be used to declare a block scope local variable. See Variable scope
                                 below.
                             </p>
@@ -262,6 +292,8 @@
             <li>All the documentation in this page is taken from <a href="#"> MDN </a>
             </li>
         </ul>
+
+        <!-- What's left now is the handwriting, the left hand side and the  disappearing nav bar -->
     </div>
 
     <!-- Script Source Files -->
