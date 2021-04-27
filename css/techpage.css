@@ -3,24 +3,137 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  margin-left: 0;
+  /* max-height: 50%; */
+}
 .header-container {
   height: 1.2rem;
   width: 100vw;
 }
-nav {
-  background-color: yellow;
-  height: 1.2 rem;
-  border: 1px solid black;
+/* Navbar */
+.navbar-toggler .navbar-toggler-icon {
+  background-color: black !important;
+  /* transform: scale(50%, 50%);
+  transition: ease-in-out; */
+  border: none !important;
 }
+.navbar-toggler {
+  background-color: black !important;
+
+  border: none !important;
+}
+.disappearing-nav {
+  width: 35vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  position: absolute;
+  padding: 3px;
+  /* top: 100%;
+  left: 0%; */
+  top: 10%;
+  left: 1%;
+}
+
+.navbar h3 {
+  border-bottom: 2px solid;
+  text-align: center;
+  font-size: large;
+}
+
+.nav-column {
+  overflow-y: scroll;
+  /* overflow-x: hidden; */
+  padding: 0;
+  z-index: -2 !important;
+  /* margin-left: 0 !important; */
+}
+.navbar .nav-item a {
+  color: black !important;
+  border-bottom: solid black 2px;
+  list-style-type: none !important;
+}
+#toggler-icon {
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  height: 0.75rem;
+  border: none !important;
+  z-index: 3 !important;
+}
+.test-section {
+  background-color: rgb(233, 215, 181);
+  /* line-height: 1.2rem; */
+}
+.test-result li {
+  list-style-type: disc;
+}
+#run-test {
+  display: block;
+  margin-bottom: 0 !important;
+}
+#tests {
+  margin-bottom: 0 !important;
+}
+
+.tests {
+  display: flex;
+}
+.tests button {
+  color: white;
+}
+.flex-buttons {
+  display: flex;
+  flex-direction: column;
+}
+#run-test:hover {
+  color: lightgray !important;
+  transition: ease-in-out;
+}
+#tests:hover {
+  color: lightgray !important;
+  transition: ease-in-out;
+}
+.disappearing-nav input {
+  border: none;
+}
+/* End of Navbar */
+.relative-position {
+  position: relative;
+}
+.help {
+  text-decoration: underline;
+  color: black;
+}
+.help:hover {
+  text-decoration: underline;
+  color: black !important;
+}
+
+#viewCourses {
+  z-index: -2 !important;
+  /* max-width: 40%; */
+}
+#introduction {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .header-wrap a {
   display: inline;
 }
-.view-courses {
-  overflow-x: visible;
-  overflow-y: visible;
-  max-height: 20%;
-}
-.view-courses a {
-  text-decoration: none;
+
+p code {
   color: black !important;
+  background-color: lightgray;
+  display: block;
+}
+footer {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

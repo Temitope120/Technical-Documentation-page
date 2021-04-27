@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- link:css This is the shortcut to typing link in full. -->
-    <link rel="stylesheet" href="../css/fcctech.css" />
+    <link rel="stylesheet" href="./css/techpage.css" />
     <!-- Bootstrap cdn   -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <!-- Bootstrap 4.5 CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="css/style.css">
     <title>
         FCC: TECHNICAL DOCUMENTATION PAGE
     </title>
@@ -49,44 +47,88 @@
 </div> -->
     <!-- This nav is not needed bcos its just the template of codepen. NOTE: Header should come first, then, write nav inside the header tag -->
 
-    <!-- overflowX:hidden; will be used for the first col which includes the links todiffernt js pages-->
+    <!-- overflowX:hidden; will be used for the first col which includes the links to differnt js pages-->
 
-    <div class="container" id=main-doc>
+    <div class="container" id="main-doc">
         <div class="row">
-            <button type="button" class="navbar-toggler" data-target="#viewCourses">
-            </button>
-            <!-- The links -->
-            <div class="col-6 view-courses">
-                <h1> View courses</h1>
-
-            <ul>
-               <p> 
-                   <a href="#introduction"> Introduction</a> 
-                </p>
-                <p> 
-                    <a href="#What_you_should_already_know"> What You Should Already know</a> 
-                </p>
-                <p> 
-                    <a href="#JavaScript_and_Java"> Javascript and java</a> 
-                </p>
-                <p> 
-                    <a href="#helloWorld"> Hello World</a>
-                </p>
-                <p> 
-                    <a href="#variables"> Variables</a>
-                 </p>
-                <p> 
-                    <a href="#declaring-variables"> Declaring Variables</a>
-                </p>
-                <p>
-                    <a href="#declaring-variables2"> Declaring Variables</a>
-                </p>
-            </ul>    
+             <!-- The Disappearing,overlaying Navbar  -->
+            <div class="nav-bar relative-position">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Responsivenavbar">
+                    <span class="navbar-toggler-icon" id="toggler-icon"></span>
+                </button>
+                <div class="disappearing-nav justify-content-center">
+                    <div class=" test-section collapse navbar-collapse" id="Responsivenavbar">
+                       <p> <label class="py-3 my-0"> Select Test Suite</label></p>
+                        <select name="s_box">
+                            <option value="s_male" selected>Technical Documentation Page</option>
+                            <option value="s_female">choose option</option>
+                            <option value="s_infant">next option</option>
+                        </select> <br> <br>
+                        <div class="tests">
+                                <div class="flex-buttons" >
+                                    <button class="btn bg-dark btn-lg px-3 ml-5" id="run-test"> Run Tests</button> <br> <br>
+                                    <button class="btn bg-dark btn-lg ml-5 px-3" id="tests"> Tests</button>
+                                </div>
+                        
+                                <ul id="test-result ">
+                                    <li class="ml-5"> Test(s) Failed</li>
+                                    <li class="ml-5"> Test(s) Passed</li>
+                                    <li class="ml-5"> Test(s) Executing</li>
+                                </ul>
+                        </div>
+                        <p> <a class="help" href="#"> Ask For Help</a></p>
+                    </div>
+                </div>
             </div>
-            <div class="col-6" id="viewCourses">
+            <!-- End of Overlaying navbar -->
+
+
+            <!-- links to different sections: Column 1 -->
+
+            
+            <div class="col-3 nav-column">
+                
+                <nav class="navbar documentation">
+                    <button type="button" class="navbar-toggler" data-target="#viewCourses">
+                    </button>
+
+                    <!-- to target the individual links -->
+                    <button type="button" class="navbar-toggler" data-target="#navbarResponsive">
+                    </button>
+                    <header>
+                        <h3> JS Documentation</h3>
+                    </header>
+                    <div id="navbarResponsive" >
+                        <ul class="navbar-nav justify-content-left" >
+                            <li class="nav-item">
+                                <a  class="nav-link" href="#introduction"> Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#What_you_should_already_know"> What You Should Already know</a>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link" href="#JavaScript_and_Java"> Javascript and java</a>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link" href="#helloWorld"> Hello World</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#variables"> Variables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#declaring-variables"> Declaring Variables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#declaring-variables2"> Declaring Variables</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-8 justify-content-center px-5" id="viewCourses">
                 <div id=" introduction">
                     <section id="introduction" class="main-section">
-                        <!--       1st header   -->
+                        <!--       1st Section   -->
                         <header>
                             <h1> Introduction </h1>
                         </header>
@@ -191,9 +233,13 @@
                         <article>
                             To get started with writing JavaScript, open the Scratchpad and write your first "Hello
                             world" JavaScript code: <br> <br>
-                            <code>function greetMe(yourName) { alert("Hello " + yourName); }
-                            greetMe("World");
-                            </code><br> <br>
+                           <p>
+                               <code>function greetMe(yourName) { <br>
+                                alert("Hello " + yourName); <br>
+                            } <br>
+                                greetMe("World");
+                                </code>
+                            </p>
                             Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
                         </article>
                     </section>
@@ -287,14 +333,14 @@
                 </div>
             </div>
         </div>
-        <header> <strong> REFERENCE </strong> </header>
-        <ul>
-            <li>All the documentation in this page is taken from <a href="#"> MDN </a>
-            </li>
-        </ul>
-
+        
         <!-- What's left now is the handwriting, the left hand side and the  disappearing nav bar -->
     </div>
+    <footer class="my-5">
+        <p > <strong> REFERENCE </strong></p>
+        <p> All the documentation in this page is taken from <a href="#"> MDN </a>
+        </p>
+    </footer>
 
     <!-- Script Source Files -->
     
